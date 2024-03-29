@@ -2,13 +2,18 @@ const express = require("express");
 const app = express();
 const port = 3000;
 
-//Config
-
+//Especificando o EJS como template engine.
 app.set("view engine", "ejs");
 
 //Rotas
-app.get("/", (req, res) => {
-  res.render("index");
+app.get("/:nome", (req, res) => {
+
+  let name = req.params.nome
+  
+  res.render("index",{
+    name:name,
+    idade:idade
+  });
 });
 
 app.get("/home", (req, res) => {
