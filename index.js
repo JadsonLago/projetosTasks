@@ -7,8 +7,17 @@ const port = 3000;
 app.set("view engine", "ejs");
 
 //Rotas
-app.get("/", (req, res) => {
-  res.render("index");
+app.get("/:nome/:lang", (req, res) => {
+  var nome = req.params.nome;
+  var lang = req.params.lang;
+  var exibirMsg = true;
+  res.render("index", {
+    nome: nome,
+    lang: lang,
+    empresa: "JTX Development",
+    inscritos: 8040,
+    msg: exibirMsg,
+  });
 });
 
 app.get("/home", (req, res) => {
