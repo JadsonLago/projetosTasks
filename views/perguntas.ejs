@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Perguntas e respostas</title>
+        
+        <!--Carregando o arquivo min.css-->
+        <link rel="stylesheet" href="/css/bootstrap.min.css" />
+
+        <link rel="stylesheet" href="/css/style.css" />
+
+    </head>
+    <body>
+        <!-- Just an image -->
+        <nav class="navbar navbar-light bg-dark">
+            <a class="navbar-brand" href="/">
+                <img
+                    src="/img/startup.png"
+                    width="30"
+                    height="30"
+                    alt=""
+                    loading="lazy"
+                />
+            </a>
+        </nav>
+        
+        <div class="container" id="formulario-pergunta">
+            <!-- Content here -->
+            <div class="card">
+                
+                <div class="card-body">
+                    <h5 class="card-title">Realizar Pergunta</h5>
+                
+                    <form>
+                        <div class="form-group">
+                            <label>Título da pergunta</label>
+                            <input type="text" placeholder="Título da pergunta" class="form-control"/>
+                            
+                        </div>
+                        <div class="form-group">
+                            <label>Descrição</label                            >
+                            <textarea placeholder="Faça sua pergunta aqui" class="form-control"></textarea>
+                            
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">Fazer pergunta</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+    <!--Dependências Bootstrap | JQuery e Pooper-->
+    <script
+        src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"
+    ></script>
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+        crossorigin="anonymous"
+    ></script>
+
+    <!--Carregando o arquivo min.js-->
+    <script src="/js/bootstrap.min.js"></script>
+</html>
