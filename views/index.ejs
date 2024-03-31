@@ -4,17 +4,30 @@
     <!-- Importando partial Navibar -->
     <%- include('partials/navbar.ejs') %>
 
-    <div class="container" id="formulario-pergunta">
+    <div class="container" id="lista-pergunta">
         <!-- Content here -->
-        <body>
-        
-            <h1>Olá estou na Home</h1>
-            <a href="/perguntas">Ir para perguntas</a>
-            
-        </body>
-        
+        <hr />
+        <h2>Perguntas recentes</h2>
+        <hr />
+        <a href="/perguntas" class="btn btn-primary">Ir para perguntas</a>
+        <hr />
+
+        <% perguntas.forEach(perguntas => { %>
+        <div class="card">
+            <div class="card-body">
+                <h4><%= perguntas.title %></h4>
+                <p><%= perguntas.createdAt %></p>
+            </div>
+            <div class="card-footer">
+                <a href="/pergunta/<%= perguntas.id %>" class="btn btn-primary">Responder</a>
+            </div>
+        </div>
+        <br />
+
+        <!-- <div class="card-footer"><p><%= //perguntas.description %></p></div>-->
+
+        <% }) %>
     </div>
 </body>
 <!-- Importando partial Footer -->
 <%- include('partials/footer.ejs') %>
-

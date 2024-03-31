@@ -1,0 +1,17 @@
+<!-- Importando partial Header -->
+<%- include('partials/header.ejs') %>
+<body>
+    <!-- Importando partial Navibar -->
+    <%- include('partials/navbar.ejs') %>
+
+    <div class="container" id="tela-pergunta">
+        <!-- Content here -->
+        <hr>
+        <h1><%= perguntas.title %></h1>
+        <p><%= perguntas.description %></p>
+        <p><%= perguntas.createdAt %></p>
+        <hr>
+    </div>
+</body>
+<!-- Importando partial Footer -->
+<%- include('partials/footer.ejs') %>
